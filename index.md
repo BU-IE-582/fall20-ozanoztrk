@@ -3,9 +3,9 @@
 
 ## HW1
 
-[You can find HW1 in here.](https://github.com/BU-IE-582/fall20-ozanozturk/tree/gh-pages/files/HW1/HW1.html)
+[You can find HW1 in here.](https://bu-ie-582.github.io/fall20-ozanozturk/files/HW1/HW1.html)
 
-[Download code for HW1.](https://github.com/BU-IE-582/fall20-ozanozturk/tree/gh-pages/files/HW1/HW1.ipynb)
+[Download code for HW1.](https://bu-ie-582.github.io/fall20-ozanozturk/files/HW1/HW1.ipynb)
 
 
 
