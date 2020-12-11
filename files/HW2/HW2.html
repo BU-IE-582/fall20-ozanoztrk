@@ -14009,7 +14009,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
@@ -14028,7 +14028,7 @@ div#notebook {
 <span class="k">def</span> <span class="nf">get_same_label_ts</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">i</span><span class="p">]</span>
 
-<span class="n">pca_vel</span>
+<span class="n">pca_acc</span>
 </pre></div>
 
     </div>
@@ -14041,7 +14041,180 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time series id</th>
+      <th>time index</th>
+      <th>label</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+      <th>PCA_1D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>6.0</td>
+      <td>-0.304243</td>
+      <td>-2.119396</td>
+      <td>-1.528965</td>
+      <td>-2.492575</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>6.0</td>
+      <td>-0.304243</td>
+      <td>-2.119396</td>
+      <td>-1.528965</td>
+      <td>-2.492575</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>6.0</td>
+      <td>-0.304243</td>
+      <td>-2.119396</td>
+      <td>-1.528965</td>
+      <td>-2.492575</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0</td>
+      <td>4</td>
+      <td>6.0</td>
+      <td>-0.304243</td>
+      <td>-2.119396</td>
+      <td>-1.528965</td>
+      <td>-2.492575</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0</td>
+      <td>5</td>
+      <td>6.0</td>
+      <td>-0.304243</td>
+      <td>-2.119396</td>
+      <td>-1.528965</td>
+      <td>-2.492575</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>310</td>
+      <td>895</td>
+      <td>311</td>
+      <td>5.0</td>
+      <td>1.968575</td>
+      <td>-0.886777</td>
+      <td>-0.848602</td>
+      <td>-0.262244</td>
+    </tr>
+    <tr>
+      <td>311</td>
+      <td>895</td>
+      <td>312</td>
+      <td>5.0</td>
+      <td>2.028532</td>
+      <td>-0.820651</td>
+      <td>-0.828104</td>
+      <td>-0.177775</td>
+    </tr>
+    <tr>
+      <td>312</td>
+      <td>895</td>
+      <td>313</td>
+      <td>5.0</td>
+      <td>1.987267</td>
+      <td>-0.754525</td>
+      <td>-0.800426</td>
+      <td>-0.132596</td>
+    </tr>
+    <tr>
+      <td>313</td>
+      <td>895</td>
+      <td>314</td>
+      <td>5.0</td>
+      <td>1.887578</td>
+      <td>-0.688399</td>
+      <td>-0.768603</td>
+      <td>-0.110094</td>
+    </tr>
+    <tr>
+      <td>314</td>
+      <td>895</td>
+      <td>315</td>
+      <td>5.0</td>
+      <td>1.787888</td>
+      <td>-0.622273</td>
+      <td>-0.736781</td>
+      <td>-0.087592</td>
+    </tr>
+  </tbody>
+</table>
+<p>282240 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pca_vel</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -14195,14 +14368,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Comparasion between plots. I plotted in 3D format. This makes it possible to observe the real data and transformed data (PCA) at the same time. The PCA data is plotted by denoting a constant for the dimension x. This way it acts like 2D in 3D format.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14498,7 +14663,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As seen from from the graphs, when we decrease the dimension by PCA, when can plot two dimensional plots. However, plots doesn't show any similarity between their 3d versions in terms of shape. When we look at one dimensional plots, we can see that they follow some characteristics. In other words, time series in the same class mostly have similar one dimensional graphs. For instance, Accelearation of class 1 2 and 8, plots look very similar to each other. When we look at different classes, we see peeks and valleys at different times compare to other classes. However is not very easy to distinguish classes by just looking at one dimensional graphs.</p>
+<p>Comparasion between plots. I plotted in 3D format. This makes it possible to observe the real data and transformed data (PCA) at the same time. The PCA data is plotted by denoting a constant for the dimension x. This way it acts like 2D in a 3D setting.</p>
+<p>As seen from the graphs, when we decrease the dimension by PCA, we can plot two dimensional plots. However, plots don't show any similarities compare to their 3d versions in terms of shape. When we look at two dimensional plots, we can see that they follow some characteristics. In other words, time series in the same class mostly have similar two dimensional graphs. For instance, Accelearation of class 1 2 and 8, plots look very similar to each other. When we look at different classes, we see peeks and valleys at different times compare to other classes. However is not very easy to distinguish classes by just looking at two dimensional graphs.</p>
 
 </div>
 </div>
@@ -14687,7 +14853,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In here benchmark represents PCA information without filtering data into classes. If we look at the explained variance ratios we see that in most of the cases it is greater than the bechmark. It is expected to obtain this result, since if classes shapes are different then their orthogonal bases would be different. By setting best bases we can explain more of the variance in the set. It is important to note that when we filter data our sample size decrease as well. So for components explained variance ratio doesn't represent the whole data. 
+<p>In here benchmark represents PCA information without filtering data into classes. If we look at the explained variance ratios, we see that in most of the cases it is greater than the bechmark. It is expected to obtain this result, since if classes shapes are different, then their orthogonal bases should also be different. By setting best bases we can explain more of the variance in the our sample. It is important to note that when we filter data our sample size decrease as well. So for components explained variance ratio doesn't represent the whole data. 
 Another finding is that y eigenvalue of the component 1 is more stable compare to x and z.</p>
 
 </div>
@@ -14849,7 +15015,7 @@ Another finding is that y eigenvalue of the component 1 is more stable compare t
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By including 2 component, now we better explained the variance in the data. It is important to note that the marginal increase in variance is diminished.</p>
+<p>By including 2 component, now we better explained the variance in the data. It is important to note that the marginal increase in explained variance is diminished.</p>
 
 </div>
 </div>
