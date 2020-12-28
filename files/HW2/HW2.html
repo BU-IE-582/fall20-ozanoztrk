@@ -14850,15 +14850,6 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In here benchmark represents PCA information without filtering data into classes. If we look at the explained variance ratios, we see that in most of the cases it is greater than the bechmark. It is expected to obtain this result, since if classes shapes are different, then their orthogonal bases should also be different. By setting best bases we can explain more of the variance in the our sample. It is important to note that when we filter data our sample size decrease as well. So for components explained variance ratio doesn't represent the whole data. 
-Another finding is that y eigenvalue of the component 1 is more stable compare to x and z.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
@@ -15015,7 +15006,7 @@ Another finding is that y eigenvalue of the component 1 is more stable compare t
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By including 2 component, now we better explained the variance in the data. It is important to note that the marginal increase in explained variance is diminished.</p>
+<p>By including 2 component, now we better explained the variance in the data.</p>
 
 </div>
 </div>
@@ -16211,14 +16202,6 @@ Another finding is that y eigenvalue of the component 1 is more stable compare t
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In here, we follow a different method. Instead of PCA, we look at the distance between instances. However, by only looking at the graph it is difficult to distungish classes. For instance, it is impossible to separate Class 1 and Class 6. Class 7 is the most observable class in the data. Moreover, we can obtain which classes are far distanant from each other. For example, class 5 and Class 2 are far distant from each other.</p>
-
-</div>
-</div>
 </div>
     </div>
   </div>
