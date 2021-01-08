@@ -44197,9 +44197,9 @@ No feasible solution is found for betas thus we are selecting the betas which mi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Summary-and-Evaluation">Summary and Evaluation<a class="anchor-link" href="#Summary-and-Evaluation">&#182;</a></h2><p>I basicly customized the objective function and tried to solve the optimization problem. In this process, I faced some difficulties.</p>
-<p>cvxpy package's default solver cannot solve the optimization problem. I don't know why. Nevertheless, there are other solvers available in the package. cvxopt looks promising but I did not have time to configure it.(the package does not support my current version of python. Thus, cvxpy cannot call it). Therefore, I used SCS (Splitting Conic Solver) which is pre-installed in the cvxpy package.  But unfortunely, this method was instable as well. In some cases the optimization gave error and stated that the problem was infeasible. In this cases the process returned None for beta values. I could not find a way to overcome this problem.</p>
-<p>By cross validation, we tried to tune alpha and lambda parameters. Even though SCS solves the optimization problem for splits, when I applied the solver to the whole training set for tuned parameteters, again for some cases it raised the same error (infeasible). In these cases, I took the beta values which had given the minimum error in splits validation set, which not a optimal strategy for sure.</p>
+<h2 id="Summary-and-Evaluation">Summary and Evaluation<a class="anchor-link" href="#Summary-and-Evaluation">&#182;</a></h2><p>I basically customized the objective function and tried to solve the optimization problem. In this process, I faced some difficulties.</p>
+<p>cvxpy package's default solver cannot solve the optimization problem. I don't know why. Nevertheless, there are other solvers available in the package. cvxopt looks promising but I did not have time to configure it.(the package does not support my current version of python. Thus, cvxpy cannot call it). Therefore, I used SCS (Splitting Conic Solver) which is pre-installed in the cvxpy package. But unfortunately, this method was instable as well. In some cases the optimization gave error and stated that the problem was infeasible. In this cases the process returned None for beta values. I could not find a way to overcome this problem.</p>
+<p>By cross validation, we tried to tune alpha and lambda parameters. Even though SCS solves the optimization problem for splits, when I applied the solver to the whole training set for tuned parameters, again for some cases it raised the same error (infeasible). In these cases, I took the beta values which had given the minimum error in splits validation set, which not a optimal strategy for sure.</p>
 <p>For some splits, the solver returns only None. Moreover sometimes the solver return only a few solution, in such cases, it is impossible to select the best option, instead we chose only the available option.</p>
 <p>I am open for suggestions. If anybody can overcome this problem please feel free to contribute.</p>
 
@@ -44362,7 +44362,7 @@ No feasible solution is found for betas thus we are selecting the betas which mi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Linear regression model gives the worst performance. This is normal because there is multicolinearty between variables thus including all variable without any penalty is not logical. As a result it yielded worse compare to regularized versions. Between Lasso and Custom Loss (fussed penalties), we can not differentiate due to the problems mentioned 'Summary and Evaluation'.</p>
+<p>Linear regression model gives the worst performance. This is normal because there is multicollinearty between variables thus including all variable without any penalty is not logical. As a result it yielded worse compare to regularized versions. Between Lasso and Custom Loss (fussed penalties), we can not differentiate due to the problems mentioned 'Summary and Evaluation'.</p>
 
 </div>
 </div>
