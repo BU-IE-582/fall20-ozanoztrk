@@ -26,8 +26,8 @@
 
 ## HW 4
 
-[You can find HW3 in here.](https://bu-ie-582.github.io/fall20-ozanozturk/files/HW4/HW4.html)
+[You can find HW4 in here.](https://bu-ie-582.github.io/fall20-ozanozturk/files/HW4/HW4.html)
 
-[Download code for HW3.](https://bu-ie-582.github.io/fall20-ozanozturk/files/HW4/HW4.ipynb)
+[Download code for HW4.](https://bu-ie-582.github.io/fall20-ozanozturk/files/HW4/HW4.ipynb)
 
 
